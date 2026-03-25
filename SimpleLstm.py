@@ -10,13 +10,13 @@ import json
 import os
 
 
-with open('sample_annotation.json') as f:
+with open('v1.0-mini/sample_annotation.json') as f:
     annotations = json.load(f)
 
-with open('instance.json') as f:
+with open('v1.0-mini/instance.json') as f:
     instances = json.load(f)
 
-with open('category.json') as f:
+with open('v1.0-mini/category.json') as f:
     categories = json.load(f)
 
 
