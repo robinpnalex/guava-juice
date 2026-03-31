@@ -42,6 +42,10 @@ Our data extraction pipeline:
 - Anchors the trajectories to the current position (last observed frame).
 - Extracts data for up to 5 valid nearby neighbors to generate the social context.
 
+## Dataset
+
+Download the nuScenes `v1.0-mini` dataset from [nuscenes.org](https://www.nuscenes.org/download) and upload it to your Google Drive. Set the `DATAROOT` variable in the code to point to its location.
+
 ## Setup & Installation Instructions
 You'll need Python 3 and a few standard ML libraries. To get everything running, install the dependencies using pip:
 
