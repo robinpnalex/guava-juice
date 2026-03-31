@@ -221,7 +221,8 @@ def train(obs_np, target_np, social_np, epochs=100, lr=5e-4, batch=64):
  
     return model
 
-
+trajectories, frame_map = load_data(".")
+obs_np, target_np, social_np = build_windows(trajectories, frame_map)
 from sklearn.model_selection import train_test_split
 (obs_train, obs_test,
      tgt_train, tgt_test,
