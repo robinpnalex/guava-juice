@@ -46,6 +46,8 @@ Our data extraction pipeline:
 
 Download the nuScenes `v1.0-mini` dataset from [nuscenes.org](https://www.nuscenes.org/download) and upload it to your Google Drive. Set the `DATAROOT` variable in the code to point to its location.
 
+For the Social LSTM notebook (`SocialLstm (1).ipynb`), the nuScenes JSON files need to be uploaded directly to the Colab session as the notebook reads them from the current directory.
+
 ## Setup & Installation Instructions
 You'll need Python 3 and a few standard ML libraries. To get everything running, install the dependencies using pip:
 
