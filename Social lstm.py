@@ -89,11 +89,11 @@ def load_data(data_dir="."):
         instances = json.load(f)
     with open("category.json") as f:
         categories = json.load(f)
-    with open("sample.json") as f:                          # ADD THIS
+    with open("sample.json") as f:                          
         samples = json.load(f)
 
     cat_map = {c["token"]: c["name"] for c in categories}
-    sample_order = {s["token"]: s["timestamp"] for s in samples}  # ADD THIS
+    sample_order = {s["token"]: s["timestamp"] for s in samples}  
 
     ped_tokens = {
         i["token"]
@@ -119,7 +119,7 @@ def load_data(data_dir="."):
                 ann["translation"][1],
             ))
 
-    for pid in trajectories:                                # now sample_order exists
+    for pid in trajectories:                                
         trajectories[pid].sort(key=lambda x: sample_order.get(x[0], 0))
 
     return trajectories, frame_map
@@ -134,7 +134,6 @@ def build_windows(trajectories, frame_map):
     WINDOW_SIZE = OBS_LEN + PRED_LEN  
  
     for ped_id, path in trajectories.items():
-        # path is a list of (sample_token, x, y) sorted by time
         if len(path) < WINDOW_SIZE:
             continue
  
